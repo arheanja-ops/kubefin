@@ -1,0 +1,32 @@
+# Binarios
+/bin/
+*.exe
+*.out
+
+# Artefactos de salida
+*_report_*.json
+/tmp/
+
+# Go
+*.test
+*.prof
+vendor/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Secretos (nunca versionar)
+.env
+.env.local
+*.tfvars
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# gh CLI aislado (config local al repo, cuenta personal)
+.gh/
+
+# direnv
+.direnv/
