@@ -35,3 +35,13 @@ type CostRow struct {
 	Period    Period `json:"period"`
 	Amount    Money  `json:"amount"`
 }
+
+// GroupBy enumera las dimensiones por las que se puede agrupar el costo (R2.4).
+type GroupBy string
+
+const (
+	// GroupByService agrupa por servicio de AWS (lineItem/ProductCode).
+	GroupByService GroupBy = "service"
+	// GroupByTag agrupa por el valor de un tag de asignación de costos.
+	GroupByTag GroupBy = "tag"
+)
