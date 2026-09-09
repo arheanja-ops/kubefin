@@ -33,5 +33,7 @@ func NewRootCmd(version string) *cobra.Command {
 	pf.StringVarP(&gf.output, "output", "o", "table", "formato de salida: table, json, markdown, confluence")
 
 	root.AddCommand(newEKSCmd(gf))
+	root.AddCommand(newCostCmd(gf))
+	root.AddCommand(newOptimizeCmd(gf))
 	return root
 }
