@@ -35,5 +35,7 @@ func NewRootCmd(version string) *cobra.Command {
 	root.AddCommand(newEKSCmd(gf))
 	root.AddCommand(newCostCmd(gf))
 	root.AddCommand(newOptimizeCmd(gf))
+	root.AddCommand(newMCPCmd(gf, version))
+	root.AddCommand(newAskCmd(gf))
 	return root
 }
